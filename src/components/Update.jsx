@@ -155,7 +155,7 @@ export default function Update({ onUpdateOpen, onUpdateClose, id }) {
                                         name="gender"
                                         sx={{ mb: 2 }}
                                         checked={updateData && updateData.gender ? true : false}
-                                        value={updateData1 && updateData1[0].gender}
+                                        value={updateData.gender == undefined ? updateData1[0].gender : updateData.gender}
 
                                     >
                                         <FormControlLabel value="female" control={<Radio />} label="Female" onChange={newData} />
@@ -168,7 +168,7 @@ export default function Update({ onUpdateOpen, onUpdateClose, id }) {
                                         <Select
                                             labelId="demo-simple-select-label"
                                             id="demo-simple-select"
-                                            value={updateData1 && updateData1[0].country}
+                                            value={updateData.country == undefined ? updateData1[0].country : updateData.country}
                                             label="Country"
                                             onChange={newData}
                                             name="country"

@@ -90,7 +90,7 @@ export const updateUser = createAsyncThunk(
     'updateUser',
     async (data, { rejectWithValue }) => {
         console.log("update", data)
-        const response = await fetch(`http://localhost:3004/users/${data.id}`, {
+        const response = await fetch(`http://localhost:3000/users/${data.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
